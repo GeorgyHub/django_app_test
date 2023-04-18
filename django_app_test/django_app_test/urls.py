@@ -1,7 +1,8 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from app_test.views import menu
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', include('app_test.urls')),
+    path('', menu, name='menu'),
 ]

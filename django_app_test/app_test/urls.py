@@ -1,5 +1,6 @@
-from django.urls import path, include
+from django.urls import path
+from .views import menu
 
 urlpatterns = [
-    #path('test/', include('app_test.urls')),
+    path('', menu, name='menu'),
 ]
