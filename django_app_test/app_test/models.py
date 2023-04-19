@@ -9,7 +9,7 @@ class MenuItem(MPTTModel):
     name = models.CharField(max_length=100, null=True)
     url = models.CharField(max_length=255)
     position = models.PositiveIntegerField('Позиция', default=1)
-    parent = TreeForeignKey('self', on_delete=models.CASCADE, blank=True, related_name='children')
+    parent = TreeForeignKey('self', on_delete=models.CASCADE, blank=True)
 
     class MPTTMeta:
         order_insertion_by = ['position']

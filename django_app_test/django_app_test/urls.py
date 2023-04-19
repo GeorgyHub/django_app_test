@@ -1,8 +1,8 @@
 from django.contrib import admin
 from django.urls import path
-from app_test.views import menu
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', menu, name='menu'),
+    path('', TemplateView.as_view(template_name="home.html")),
 ]
