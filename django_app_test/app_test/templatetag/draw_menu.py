@@ -1,5 +1,5 @@
 from django import template
-from app_test.models import MenuItem
+from core.models import MenuItem
 register = template.Library()
 
 
